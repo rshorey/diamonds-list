@@ -2,15 +2,23 @@ from django.db import models
 
 # Create your models here.
 
-class User(models.Model):
+class BaseModel(models.Model):
+    created_date = models.DateTimeField(auto_now_add=True)
+    modified_date = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        abstract = True
+
+class User(BaseModel):
     firstname = models.CharField(max_length=200, blank=True, null=True)
     lastname = models.CharField(max_length=200, blank=True, null=True)
     profile = models.TextField()
+    certifications = models.TextField(blank=True, null=True)
 
     def __str__(self):
         return "{} {}".format(self.firstname, self.lastname)
 
-class Listing(models.Model):
+class Listing(BaseModel):
     user = models.ForeignKey(User)
     
     LISTING_CATEGORIES = (
@@ -21,7 +29,6 @@ class Listing(models.Model):
     service_type = models.CharField(max_length=50, choices=LISTING_CATEGORIES, blank=True, null=True)
     title = models.CharField(max_length=20, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
-    certifications = models.TextField(blank=True, null=True)
     hourly_rate = models.IntegerField(blank=True, null=True)
     has_references = models.NullBooleanField()
 

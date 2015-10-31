@@ -4,7 +4,7 @@ from django.template import RequestContext, loader
 from app.models import *
 
 def index(request):
-    listings = Listing.objects.all()
+    listings = Listing.objects.order_by('-created_date')[:10]
     context = {'listings': listings}
     return render(request, 'app/index.html', context)
 
