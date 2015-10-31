@@ -23,7 +23,11 @@ class Listing(BaseModel):
     
     LISTING_CATEGORIES = (
         ("AUTO", "Auto Repair"),
-        ("LANDSCAPING","Landscaping")
+        ("LANDSCAPING","Landscaping"),
+        ("TECH", "Technology"),
+        ("CREATIVE", "Creative and Design"),
+        ("COACHING", "Coaching/Tutoring")
+
         )
     
     service_type = models.CharField(max_length=50, choices=LISTING_CATEGORIES, blank=True, null=True)
