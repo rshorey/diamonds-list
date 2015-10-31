@@ -14,7 +14,7 @@ class User(BaseModel):
     lastname = models.CharField(max_length=200, blank=True, null=True)
     profile = models.TextField()
     certifications = models.TextField(blank=True, null=True)
-
+    num_jobs_completed = models.IntegerField(default=0) #will eventually be calculated, but this works for now
     def __str__(self):
         return "{} {}".format(self.firstname, self.lastname)
 

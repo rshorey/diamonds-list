@@ -8,7 +8,7 @@
 </head>
 
 <h1>{{ listing.title }}</h1>
-
+<h4>
 User: <a href="/user/{{ user.id }}/">{{ listing.user.firstname}} {{ listing.user.lastname }} </a><br>
 Service category: {{ listing.service_type }} <br>
 Description: {{ listing.description }} <br>
@@ -17,5 +17,4 @@ Hourly Rate: ${{ listing.hourly_rate }} <br>
 {% if listing.has_references %}
     This person has references about this kind of work that you can call!
 {% endif %}
-
-
+</h4>
