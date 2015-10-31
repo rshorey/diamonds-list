@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4!vn1zn+_(z_j7hjhhf1!63@$0f@0(&&$$798a4le5e998_&yn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'diamondslist.wsgi.application'
 DATABASES = {
  'default': {
  'ENGINE': 'django.db.backends.postgresql_psycopg2',
- 'NAME': 'df217jvi9cht39', 
- 'USER': 'ntvpvmpqnqzwld',
- 'PASSWORD': 'Pn83Q-fvgFT04Hw8kOYj-5U302',
- 'HOST': 'ec2-54-225-199-108.compute-1.amazonaws.com'
+ 'NAME': os.enviro['HEROKU_DB_NAME'], 
+ 'USER': os.enviro['HEROKU_DB_USER'],
+ 'PASSWORD': os.enviro['HEROKU_DB_PASSWORD'],
+ 'HOST': os.enviro['HEROKU_DB_HOST']
  }
 }
 
