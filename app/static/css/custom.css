@@ -9,8 +9,8 @@ h1 {
 
 
 .front-page{
-    background-image: url("../img/road.jpg");
-    background-position: 0% 25%;
+    background-image: url("../img/road.jpeg");
+    background-position: 0% 50%;
     background-size: cover;
     background-repeat: no-repeat;
 }
