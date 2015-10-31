@@ -1,5 +1,5 @@
 h1, h2, h3, h4, h5, h6, p, div {
-    font-family: 'Inconsolata', Georgia, Times, serif;
+    font-family: 'Segoe', Georgia, Times, serif;
 }
 
 h1 {
@@ -7,45 +7,9 @@ h1 {
     font-family: 'Righteous', Arial, serif;
 }
 
-.first-words {
-    font-size: x-large;
-}
-
-.row-same-height {
-  display: table;
-  width: 100%;
-  /* fix overflow */
-  table-layout: fixed;
-  
-}
-
-.next-category{
-    padding-top: 20px;
-}
-
-.col-sm-4{
-    padding-bottom: 5px;
-}
-
-
-.whole-page{
-    background-color: #eeeeee;
-}
-
-.currently{
-    background-color: #eeeeee;
-}
-
-.formerly{
-    background-color: #dddddd;
-}
-
-.projects{
-    background-color: #cccccc;
-}
 
 .front-page{
-    background-image: url("../img/sunset.jpeg");
+    background-image: url("../img/woctechchat.jpg");
     background-position: 0% 25%;
     background-size: cover;
     background-repeat: no-repeat;
