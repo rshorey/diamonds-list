@@ -78,15 +78,25 @@ WSGI_APPLICATION = 'diamondslist.wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'diamondslist',
-            'USER': 'diamondslist',
-            'PASSWORD': '',
-            'HOST': 'localhost',
-            'PORT': '',
-        }
-    }
+ 'default': {
+ 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+ 'NAME': 'df217jvi9cht39', 
+ 'USER': 'ntvpvmpqnqzwld',
+ 'PASSWORD': 'Pn83Q-fvgFT04Hw8kOYj-5U302',
+ 'HOST': 'ec2-54-225-199-108.compute-1.amazonaws.com'
+ }
+}
+
+import dj_database_url
+DATABASES['default'] = dj_database_url.config()
+
+# Honor the 'X-Forwarded-Proto' header for request.is_secure()
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
+
+
 
 
 
