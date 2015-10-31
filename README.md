@@ -6,4 +6,9 @@ The goals are 1) to provide affordable assistance to communities and organizatio
 Available services include repairs (e.g., home, auto), maintenance (e.g., cleaning, landscaping) or freelance projects (e.g., digital services, advocacy speakers).
 
 
-Using Python3
+* Using Python3/postgres
+* create virtual environment using python 3
+* pip install -r requirements.txt
+* createuser diamondslist -s
+* createdb diamondslist -U diamondslist
+* You should be able to run, but let me know if I forgot something!
