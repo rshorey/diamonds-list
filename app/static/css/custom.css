@@ -1,15 +1,15 @@
 h1, h2, h3, h4, h5, h6, p, div {
-    font-family: 'Segoe', Georgia, Times, serif;
+    font-family: 'Open Sans', Georgia, Times, serif;
 }
 
 h1 {
 
-    font-family: 'Righteous', Arial, serif;
+    font-family: 'Montserrat', Arial, serif;
 }
 
 
 .front-page{
-    background-image: url("../img/woctechchat.jpg");
+    background-image: url("../img/road.jpg");
     background-position: 0% 25%;
     background-size: cover;
     background-repeat: no-repeat;
