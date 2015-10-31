@@ -1,1 +1,1 @@
-web: gunicorn INSERTNAMEOFDJANGOPROJECT.wsgi
+web: gunicorn diamondslist.wsgi
