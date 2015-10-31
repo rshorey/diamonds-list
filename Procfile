@@ -1,1 +1,1 @@
-web: gunicorn diamondslist.wsgi
+web: gunicorn diamondslist.wsgi --log-file -
