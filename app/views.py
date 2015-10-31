@@ -10,7 +10,7 @@ def index(request):
 
 def user(request, user_id):
     user = get_object_or_404(User, pk=user_id)
-    return render(request, 'app/user.html', {'user': user})
+    return render(request, 'app/user.html', {'user': user, 'listings' : user.listing_set.all()})
 
 def listing(request, listing_id):
     listing = get_object_or_404(Listing, pk=listing_id)
