@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from app import views
+from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -23,3 +24,6 @@ urlpatterns = [
     url(r'^user/(?P<user_id>[0-9]+)/$', views.user, name='user'),
     url(r'^listing/(?P<listing_id>[0-9]+)/$', views.listing, name='listing'),
 ]
+
+if not(settings.DEBUG):
+    urlpatterns.append(url((r'^static/(?P.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT})))
