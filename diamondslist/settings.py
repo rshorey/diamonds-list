@@ -22,15 +22,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ["SECRET_KEY"]
 
-# SECURITY WARNING: don't run with debug turned on in production!
+#this is cheap and dirty but works - must have debug true to run locally
+ALLOWED_HOSTS = []
 try:
     DEBUG = os.environ["DJANGO_DEBUG"]
 except KeyError:
     DEBUG = False
     import dj_database_url
     DATABASES['default'] = dj_database_url.config()
+    ALLOWED_HOSTS = ['*']
 
-ALLOWED_HOSTS = []
+
 
 
 # Application definition
@@ -96,8 +98,6 @@ DATABASES = {
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
-# Allow all host headers
-ALLOWED_HOSTS = ['*']
 
 
 
