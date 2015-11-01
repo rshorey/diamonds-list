@@ -9,7 +9,7 @@
 
 <h1>{{ listing.title }}</h1>
 <h4>
-User: <a href="/user/{{ user.id }}/">{{ listing.user.firstname}} {{ listing.user.lastname }} </a><br>
+User: <a href="/user/{{ listing.user.id }}/">{{ listing.user.firstname}} {{ listing.user.lastname }} </a><br>
 Service category: {{ listing.service_type }} <br>
 Description: {{ listing.description }} <br>
 Hourly Rate: ${{ listing.hourly_rate }} <br>
