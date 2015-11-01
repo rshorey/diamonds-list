@@ -11,4 +11,18 @@ Available services include repairs (e.g., home, auto), maintenance (e.g., cleani
 * pip install -r requirements.txt
 * createuser diamondslist -s
 * createdb diamondslist -U diamondslist
+* Edit the virtualenv's postactivate file (instructions below from commandline with sublime, any text editor works):
+* subl $VIRTUAL_ENV/bin/postactivate
+* Paste in the following:
+
+  ```
+  export HEROKU_DB_NAME='diamondslist'
+  export HEROKU_DB_USER='diamondslist'
+  export HEROKU_DB_PASSWORD=''
+  export HEROKU_DB_HOST='localhost'
+  export DJANGO_DEBUG=True
+  export SECRET_KEY='any_string_here'
+  ```
+  
+* Deactivate your virtual environment, and then reactivate
 * You should be able to run, but let me know if I forgot something!
