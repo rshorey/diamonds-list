@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'diamondslist.wsgi.application'
 DATABASES = {
  'default': {
  'ENGINE': 'django.db.backends.postgresql_psycopg2',
- 'NAME': os.enviro['HEROKU_DB_NAME'], 
- 'USER': os.enviro['HEROKU_DB_USER'],
- 'PASSWORD': os.enviro['HEROKU_DB_PASSWORD'],
- 'HOST': os.enviro['HEROKU_DB_HOST']
+ 'NAME': os.environ['HEROKU_DB_NAME'], 
+ 'USER': os.environ['HEROKU_DB_USER'],
+ 'PASSWORD': os.environ['HEROKU_DB_PASSWORD'],
+ 'HOST': os.environ['HEROKU_DB_HOST']
  }
 }
 
