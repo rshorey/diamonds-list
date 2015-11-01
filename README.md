@@ -14,6 +14,7 @@ Available services include repairs (e.g., home, auto), maintenance (e.g., cleani
 * Edit the virtualenv's postactivate file (instructions below from commandline with sublime, any text editor works):
 * subl $VIRTUAL_ENV/bin/postactivate
 * Paste in the following:
+
   export HEROKU_DB_NAME='diamondslist'
   export HEROKU_DB_USER='diamondslist'
   export HEROKU_DB_PASSWORD=''
