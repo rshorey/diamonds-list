@@ -1,1 +1,1 @@
-web: python my_django_app/manage.py collectstatic --noinput; gunicorn diamondslist.wsgi --log-file -
+web: gunicorn diamondslist.wsgi --log-file -
