@@ -20,13 +20,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '4!vn1zn+_(z_j7hjhhf1!63@$0f@0(&&$$798a4le5e998_&yn'
+SECRET_KEY = os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 try:
     DEBUG = os.environ["DJANGO_DEBUG"]
 except KeyError:
     DEBUG = False
+    import dj_database_url
+    DATABASES['default'] = dj_database_url.config()
 
 ALLOWED_HOSTS = []
 
@@ -90,8 +92,6 @@ DATABASES = {
  }
 }
 
-import dj_database_url
-DATABASES['default'] = dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
