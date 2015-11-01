@@ -16,10 +16,15 @@ Available services include repairs (e.g., home, auto), maintenance (e.g., cleani
 * Paste in the following:
 
   ```export HEROKU_DB_NAME='diamondslist'
+  
   export HEROKU_DB_USER='diamondslist'
+  
   export HEROKU_DB_PASSWORD=''
+  
   export HEROKU_DB_HOST='localhost'
+  
   export DJANGO_DEBUG=True
+  
   export SECRET_KEY='any_string_here'```
   
 * Deactivate your virtual environment, and then reactivate
