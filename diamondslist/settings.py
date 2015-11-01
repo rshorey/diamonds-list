@@ -23,7 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '4!vn1zn+_(z_j7hjhhf1!63@$0f@0(&&$$798a4le5e998_&yn'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+try:
+    DEBUG = os.environ["DJANGO_DEBUG"]
+except KeyError:
+    DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -87,8 +90,8 @@ DATABASES = {
  }
 }
 
-import dj_database_url
-DATABASES['default'] = dj_database_url.config()
+#import dj_database_url
+#DATABASES['default'] = dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
