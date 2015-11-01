@@ -22,6 +22,21 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ["SECRET_KEY"]
 
+# Database
+# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
+
+DATABASES = {
+ 'default': {
+ 'ENGINE': 'django.db.backends.postgresql_psycopg2',
+ 'NAME': os.environ['HEROKU_DB_NAME'], 
+ 'USER': os.environ['HEROKU_DB_USER'],
+ 'PASSWORD': os.environ['HEROKU_DB_PASSWORD'],
+ 'HOST': os.environ['HEROKU_DB_HOST']
+ }
+}
+
+
+
 #this is cheap and dirty but works - must have debug true to run locally
 ALLOWED_HOSTS = []
 try:
@@ -81,18 +96,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'diamondslist.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.8/ref/settings/#databases
-
-DATABASES = {
- 'default': {
- 'ENGINE': 'django.db.backends.postgresql_psycopg2',
- 'NAME': os.environ['HEROKU_DB_NAME'], 
- 'USER': os.environ['HEROKU_DB_USER'],
- 'PASSWORD': os.environ['HEROKU_DB_PASSWORD'],
- 'HOST': os.environ['HEROKU_DB_HOST']
- }
-}
 
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
