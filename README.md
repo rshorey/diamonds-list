@@ -11,6 +11,8 @@ Available services include repairs (e.g., home, auto), maintenance (e.g., cleani
 * pip install -r requirements.txt
 * createuser diamondslist -s
 * createdb diamondslist -U diamondslist
+## This part only works if you're using virtualenvwrapper. Otherwise you can run these lines from the terminal but you'll have to start over every time you close your terminal:
+
 * Edit the virtualenv's postactivate file (instructions below from commandline with sublime, any text editor works):
 * subl $VIRTUAL_ENV/bin/postactivate
 * Paste in the following:
@@ -25,4 +27,5 @@ Available services include repairs (e.g., home, auto), maintenance (e.g., cleani
   ```
   
 * Deactivate your virtual environment, and then reactivate
+
 * You should be able to run, but let me know if I forgot something!
