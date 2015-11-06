@@ -29,4 +29,6 @@ This part only works if you're using virtualenvwrapper. Otherwise you can run th
   
 * Deactivate your virtual environment, and then reactivate
 
+* ```python manage.py migrate```
+
 * You should be able to run, but let me know if I forgot something!
