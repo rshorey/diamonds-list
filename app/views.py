@@ -6,12 +6,12 @@ from app.models import *
 def index(request):
     listings = Listing.objects.order_by('-created_date')[:10]
     context = {'listings': listings}
-    return render(request, 'app/index.html', context)
+    return render(request, 'index.html', context)
 
 def user(request, user_id):
     user = get_object_or_404(User, pk=user_id)
-    return render(request, 'app/user.html', {'user': user, 'listings' : user.listing_set.all()})
+    return render(request, 'user.html', {'user': user, 'listings' : user.listing_set.all()})
 
 def listing(request, listing_id):
     listing = get_object_or_404(Listing, pk=listing_id)
-    return render(request, 'app/listing.html', {'listing': listing})
+    return render(request, 'listing.html', {'listing': listing})

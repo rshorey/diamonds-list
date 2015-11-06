@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>{{ user.firstname }} {{ user.lastname }}</h1>
+<h4> Bio: {{user.profile}} </h4>
+<h4> Certifications: {{user.certifications}} </h4>
+<h4> Jobs completed through Diamond's List: {{user.num_jobs_completed}}</h4>
+
+<br>
+<h3> Available listings: </h3>
+<h4><ul>
+{% for listing in listings %}
+    <li> {{ listing.title }} </li>
+{% endfor %}
+</ul></h4>
+
+{% endblock %}
