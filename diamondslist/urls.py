@@ -23,6 +23,7 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^user/(?P<user_id>[0-9]+)/$', views.user, name='user'),
     url(r'^listing/(?P<listing_id>[0-9]+)/$', views.listing, name='listing'),
+    url(r'^listings/', views.listings, name='listings'),
 ]
 
 if not(settings.DEBUG):
