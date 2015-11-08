@@ -1,0 +1,25 @@
+service_type,title,description,hourly_rate,has_references
+AUTO,Car repair,I can help repair your car,20,TRUE
+AUTO,Fix your car,"Need your car fixed, I can help!",15,FALSE
+AUTO,Car washing,I'll make your car shine,10,TRUE
+AUTO,Car detailing,"I'm a professional car detailer, let me help you!",30,TRUE
+LANSCAPING,Lawn mowing,I've been mowing lawns since I was a kid and have my own mower,15,TRUE
+LANSCAPING,Bulb planting,Contact me this fall to make your yard beautiful bext spring!,17,FALSE
+LANSCAPING,General lawn care,"Whatever your lawn needs to be green, I can do it!",13,TRUE
+LANSCAPING,Gardening,"I've got a lot of experience gardening, hit me up",25,TRUE
+LANSCAPING,I can build you a koi pond!,Impress your family and neighbors with a custom-built fish pond in your yard!!!,50,FALSE
+LANSCAPING,Pool cleaning,Your pool will sparkle,10,TRUE
+LANSCAPING,Tree removal,Need a tree removed? I can do it!,30,TRUE
+TECH,Make your website,I do responsive web design,40,TRUE
+TECH,Fix your computer,Computer repair,20,FALSE
+TECH,Tech help,I specialize in helping people learn to get the most out of their mac computer or other apple device,25,TRUE
+TECH,Broken printer?,I'm the best at printers.,28,TRUE
+TECH,Data entry,Get that data entered!,14,TRUE
+TECH,Python programming,I can help with small contract programming tasks,60,FALSE
+CREATIVE,Web design,Make your website shine.,30,TRUE
+CREATIVE,Face painting,I have done theater makeup,20,TRUE
+CREATIVE,Design posters,Need to advertise your cause? I'll make everyone take a second look.,25,TRUE
+CREATIVE,Photography,I have equipment and can photograph any event or do headshots,75,TRUE
+COACHING,Math tutoring,I can help with high school math homework,27,TRUE
+COACHING,Basketball coaching,I played 2 years of college basketball and can work with teams or individuals to bring your game to the next level,23,FALSE
+COACHING,Life coaching,I'll help you change careers.,45,TRUE

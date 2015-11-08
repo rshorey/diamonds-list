@@ -9,11 +9,22 @@
 
 <h4>
 {% if listings %}
-    <ul>
+    <table>
+
+    <tr>
+        <th> Listing </th>
+        <th> Service Type </th>
+        <th> Hourly Rate </th>
+    </tr>
+    
     {% for listing in listings %}
-        <li><a href="/listing/{{ listing.id }}/">{{ listing.title }}</a></li>
+        <tr>
+            <td><a href="/listing/{{ listing.id }}/">{{ listing.title }}</a></td>
+            <td>{{ listing.service_type }} </td>
+            <td>${{ listing.hourly_rate }} </td>
+        </tr>
     {% endfor %}
-    </ul>
+    </table>
 {% else %}
     <p>No jobs listed :(</p>
 {% endif %}

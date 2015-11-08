@@ -31,7 +31,7 @@ class Listing(BaseModel):
         )
     
     service_type = models.CharField(max_length=50, choices=LISTING_CATEGORIES, blank=True, null=True)
-    title = models.CharField(max_length=20, blank=True, null=True)
+    title = models.CharField(max_length=50, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
     hourly_rate = models.IntegerField(blank=True, null=True)
     has_references = models.NullBooleanField()
