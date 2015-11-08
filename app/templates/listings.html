@@ -5,7 +5,13 @@
 <h1> Welcome to Diamond's List! </h1>
 <h6>this is a prototype, totally in beta, not actually functioning.</h6>
 <h4>This app is designed to accept requests for assistance and transmit them to returning citizens who could complete the work.</h4>
-<h2>Here are some recent listings to check out:</h2>
+
+    <form action="" method="get">
+        <input type="text" name="q">
+        <input type="submit" value="Search">
+    </form>
+
+<h2>Available jobs:</h2>
 
 <h4>
 {% if listings %}
