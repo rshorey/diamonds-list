@@ -28,6 +28,7 @@ This part only works if you're using virtualenvwrapper. Otherwise you can run th
   ```
   
 * Deactivate your virtual environment, and then reactivate
+* Migrate the database:
 
   ```python manage.py migrate```
 
