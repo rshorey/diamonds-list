@@ -8,6 +8,24 @@ h1 {
 }
 
 
+table {
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th {
+    padding: 8px;
+}
+
+
+td {
+    padding: 4px;
+}
+
+
 .front-page{
     background-image: url("../img/road.jpeg");
     background-position: 0% 50%;

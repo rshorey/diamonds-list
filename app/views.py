@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.template import RequestContext, loader
 from app.models import *
 from django.db.models import Q
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 def index(request):
     listings = Listing.objects.order_by('-created_date')[:10]
@@ -10,13 +11,29 @@ def index(request):
     return render(request, 'index.html', context)
 
 def listings(request):
-    if 'q' in request.GET:
-        search_str = request.GET['q']
-        listings = Listing.objects.filter(Q(description__icontains=search_str)
+    params = request.GET
+    if 'q' in params:
+        search_str = params['q']
+        listing_list = Listing.objects.filter(Q(description__icontains=search_str)
                     | Q(title__icontains=search_str)
                     | Q(service_type__icontains=search_str)).order_by('-created_date')
     else:
-        listings = Listing.objects.order_by('-created_date')
+        listing_list = Listing.objects.order_by('-created_date')
+    
+    page = params.get('page')
+    per_page = params['per_page'] if 'per_page' in params else 10
+
+    paginator = Paginator(listing_list, per_page)
+
+    try:
+        listings = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        listings = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        listings = paginator.page(paginator.num_pages)
+
     context = {'listings': listings}
     return render(request, 'listings.html', context)
 
