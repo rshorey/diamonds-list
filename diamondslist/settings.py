@@ -43,6 +43,8 @@ try:
     DEBUG = os.environ["DJANGO_DEBUG"]
 except KeyError:
     DEBUG = False
+    
+if not DEBUG:
     import dj_database_url
     DATABASES['default'] = dj_database_url.config()
     ALLOWED_HOSTS = ['*']

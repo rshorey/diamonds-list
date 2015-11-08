@@ -11,7 +11,7 @@
 <h3> Available listings: </h3>
 <h4><ul>
 {% for listing in listings %}
-    <li> {{ listing.title }} </li>
+    <li> <a href="/listing/{{ listing.id }}/">{{ listing.title }}</a> </li>
 {% endfor %}
 </ul></h4>
 
