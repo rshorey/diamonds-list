@@ -3,13 +3,13 @@ AUTO,Car repair,I can help repair your car,20,TRUE
 AUTO,Fix your car,"Need your car fixed, I can help!",15,FALSE
 AUTO,Car washing,I'll make your car shine,10,TRUE
 AUTO,Car detailing,"I'm a professional car detailer, let me help you!",30,TRUE
-LANSCAPING,Lawn mowing,I've been mowing lawns since I was a kid and have my own mower,15,TRUE
-LANSCAPING,Bulb planting,Contact me this fall to make your yard beautiful bext spring!,17,FALSE
-LANSCAPING,General lawn care,"Whatever your lawn needs to be green, I can do it!",13,TRUE
-LANSCAPING,Gardening,"I've got a lot of experience gardening, hit me up",25,TRUE
-LANSCAPING,I can build you a koi pond!,Impress your family and neighbors with a custom-built fish pond in your yard!!!,50,FALSE
-LANSCAPING,Pool cleaning,Your pool will sparkle,10,TRUE
-LANSCAPING,Tree removal,Need a tree removed? I can do it!,30,TRUE
+LANDSCAPING,Lawn mowing,I've been mowing lawns since I was a kid and have my own mower,15,TRUE
+LANDSCAPING,Bulb planting,Contact me this fall to make your yard beautiful bext spring!,17,FALSE
+LANDSCAPING,General lawn care,"Whatever your lawn needs to be green, I can do it!",13,TRUE
+LANDSCAPING,Gardening,"I've got a lot of experience gardening, hit me up",25,TRUE
+LANDSCAPING,I can build you a koi pond!,Impress your family and neighbors with a custom-built fish pond in your yard!!!,50,FALSE
+LANDSCAPING,Pool cleaning,Your pool will sparkle,10,TRUE
+LANDSCAPING,Tree removal,Need a tree removed? I can do it!,30,TRUE
 TECH,Make your website,I do responsive web design,40,TRUE
 TECH,Fix your computer,Computer repair,20,FALSE
 TECH,Tech help,I specialize in helping people learn to get the most out of their mac computer or other apple device,25,TRUE
