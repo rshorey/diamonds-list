@@ -9,7 +9,11 @@ def index(request):
     return render(request, 'index.html', context)
 
 def listings(request):
-    listings = Listing.objects.order_by('-created_date')
+    if 'q' in request.GET:
+        search_str = request.GET['q']
+        listings = Listing.objects.filter(description__icontains=search_str).order_by('-created_date')
+    else:
+        listings = Listing.objects.order_by('-created_date')
     context = {'listings': listings}
     return render(request, 'listings.html', context)
 
