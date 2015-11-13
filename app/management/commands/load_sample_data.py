@@ -13,6 +13,8 @@ class Command(BaseCommand):
                 user, created = User.objects.update_or_create(first_name=line['first_name'],
                                                 last_name=line['last_name'],
                                                 username=line['username'])
+                user.set_password(line['password'])
+                user.save()
 
                 Profile.objects.update_or_create(profile=line['profile'],
                                                 num_jobs_completed=line['num_jobs_completed'],

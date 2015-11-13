@@ -4,10 +4,14 @@ from django.template import RequestContext, loader
 from app.models import *
 from django.db.models import Q
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.contrib.auth import authenticate, login
+
 
 def index(request):
     listings = Listing.objects.order_by('-created_date')[:10]
     context = {'listings': listings}
+    if request.user.is_authenticated():
+        context['user'] = request.user
     return render(request, 'index.html', context)
 
 def listings(request):

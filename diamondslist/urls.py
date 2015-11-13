@@ -17,6 +17,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from app import views
 from django.conf import settings
+from django.contrib.auth import views as auth_views
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -24,6 +25,8 @@ urlpatterns = [
     url(r'^user/(?P<user_id>[0-9]+)/$', views.user, name='user'),
     url(r'^listing/(?P<listing_id>[0-9]+)/$', views.listing, name='listing'),
     url(r'^listings/', views.listings, name='listings'),
+    url(r'^login/$', 'django.contrib.auth.views.login'),
+    url(r'^logout/$', 'django.contrib.auth.views.logout'),
 ]
 
 if not(settings.DEBUG):

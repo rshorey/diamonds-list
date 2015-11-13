@@ -9,6 +9,9 @@
         <input type="submit" value="Search">
     </form>
 </div>
+{% if user %}
+<h3> Hi {{ user.first_name }} </h3>
+{% endif %}
 <h6>this is a prototype, totally in beta, not actually functioning.</h6>
 <h4>This app is designed to accept requests for assistance and transmit them to returning citizens who could complete the work.</h4>
 <h2>Here are some recent listings to check out:</h2>
