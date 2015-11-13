@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -9,9 +10,8 @@ class BaseModel(models.Model):
     class Meta:
         abstract = True
 
-class User(BaseModel):
-    firstname = models.CharField(max_length=200, blank=True, null=True)
-    lastname = models.CharField(max_length=200, blank=True, null=True)
+class Profile(models.Model):
+    user = models.OneToOneField(User)
     profile = models.TextField()
     certifications = models.TextField(blank=True, null=True)
     num_jobs_completed = models.IntegerField(default=0) #will eventually be calculated, but this works for now
