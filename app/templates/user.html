@@ -2,10 +2,10 @@
 
 {% block content %}
 
-<h1>{{ user.first_name }} {{ user.last_name }}</h1>
-<h4> Bio: {{user.profile.profile}} </h4>
-<h4> Certifications: {{user.profile.certifications}} </h4>
-<h4> Jobs completed through Diamond's List: {{user.profile.num_jobs_completed}}</h4>
+<h1>User Information: {{ person.first_name }} {{ person.last_name }}</h1>
+<h4> Bio: {{persion.profile.profile}} </h4>
+<h4> Certifications: {{person.profile.certifications}} </h4>
+<h4> Jobs completed through Diamond's List: {{person.profile.num_jobs_completed}}</h4>
 
 <br>
 <h3> Available listings: </h3>

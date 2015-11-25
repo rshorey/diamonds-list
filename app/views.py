@@ -42,8 +42,8 @@ def listings(request):
     return render(request, 'listings.html', context)
 
 def user(request, user_id):
-    user = get_object_or_404(User, pk=user_id)
-    return render(request, 'user.html', {'user': user, 'listings' : user.listing_set.all()})
+    person = get_object_or_404(User, pk=user_id)
+    return render(request, 'user.html', {'person': person, 'listings' : person.listing_set.all()})
 
 def listing(request, listing_id):
     listing = get_object_or_404(Listing, pk=listing_id)

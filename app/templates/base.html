@@ -30,6 +30,18 @@
 
      <body>
 
+<div class="jumbotron front-page">
+<h1> Welcome to Diamond's List! </h1>
+    <form action="listings" method="get">
+        <h3>What are you looking for?</h3> <input type="text" name="q">
+        <input type="submit" value="Search">
+    </form>
+</div>
+{% if user %}
+<h3> Hi {{ user.first_name }} </h3>
+{% endif %}
+<h6>this is a prototype, totally in beta, not actually functioning.</h6>
+
      {% block content %}
 
                {% endblock %}

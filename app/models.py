@@ -15,6 +15,10 @@ class Profile(models.Model):
     profile = models.TextField()
     certifications = models.TextField(blank=True, null=True)
     num_jobs_completed = models.IntegerField(default=0) #will eventually be calculated, but this works for now
+    reason_for_joining = models.TextField(blank=True, null=True, help_text="Why did this person make an account on Diamond's List?")
+    email = models.CharField(max_length=100, blank=True, null=True)
+    phone = models.CharField(max_length=50, blank=True, null=True)
+
     def __str__(self):
         return "{} {}".format(self.firstname, self.lastname)
 
