@@ -20,7 +20,7 @@ class Profile(models.Model):
     phone = models.CharField(max_length=50, blank=True, null=True)
 
     def __str__(self):
-        return "{} {}".format(self.firstname, self.lastname)
+        return "{} {}".format(self.user.first_name, self.user.last_name)
 
 class Listing(BaseModel):
     user = models.ForeignKey(User)
