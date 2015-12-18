@@ -27,6 +27,8 @@ urlpatterns = [
     url(r'^listings/', views.listings, name='listings'),
     url(r'^login/$', 'django.contrib.auth.views.login'),
     url(r'^logout/$', 'django.contrib.auth.views.logout'),
+    url(r'^about/$', views.about, name='about'),
+
 ]
 
 if not(settings.DEBUG):
